@@ -9,6 +9,7 @@ export default function App() {
         <a
           href="https://github.com/HannahSmirnova/new-weather-react-anna-smirnova.git"
           target="_blank"
+          rel="noreferrer"
         >
           open-sourced
         </a>

@@ -13,7 +13,11 @@ export default function Weather() {
             />
           </div>
           <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-dark" />
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-dark pe-3 ps-3"
+            />
           </div>
         </div>
       </form>
@@ -32,7 +36,7 @@ export default function Weather() {
           ></img>
           14°C
         </div>
-        <div className="col-6">
+        <div className="col-6 second-column">
           <ul>
             <li>Precipitation: 0%</li>
             <li>Humidity: 80%</li>

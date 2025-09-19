@@ -1,3 +1,67 @@
+body {
+  background: linear-gradient(to right, #36454f, #d8a7b1);
+}
+
 .weather {
-  border: 1px solid #dadde1;
+  position: relative;
+  font-family: arial, sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 100px 40px;
+  padding-right: 0px;
+  border-radius: 20px;
+  margin: 200px 400px;
+  color: rgb(135, 135, 135);
+  background-color: rgb(255, 246, 246);
+  box-shadow: 0 0 20px 2px rgba(207, 73, 55, 0.6),
+    0 8px 24px rgba(100, 2, 2, 0.3);
+}
+
+.weather:hover {
+  box-shadow: 0 0 24px 3px rgba(255, 150, 150, 0.7),
+    0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.weather h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+  line-height: 29px;
+  color: black;
+}
+.col-3 {
+  padding-right: 0px;
+}
+.col-6 {
+  padding-top: 40px;
+  font-size: 42px;
+  font-weight: bold;
+  color: black;
+}
+.second-column {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  list-style: none;
+  color: rgb(135, 135, 135);
+}
+.weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.weather li {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  list-style: none;
+}
+.btn {
+  background: linear-gradient(to left, #36454f, #d8a7b1);
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #36454f, #d8a7b1);
+
+  transition: 0.3s ease-in-out;
 }

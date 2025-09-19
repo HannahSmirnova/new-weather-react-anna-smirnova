@@ -63,7 +63,6 @@ export default function Weather() {
       </div>
     );
   } else {
-    let city = "Regina";
     const apiKey = "60503d6efotf2704dfb74d90d8ce4ea6";
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=Regina&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);

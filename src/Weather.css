@@ -48,7 +48,7 @@ body {
   line-height: 19px;
   list-style: none;
   color: rgb(135, 135, 135);
-  padding-top: 54px;
+  padding-top: 58px;
 }
 .weather ul {
   margin: 0;
@@ -69,4 +69,22 @@ body {
   background: linear-gradient(to right, #36454f, #d8a7b1);
 
   transition: 0.3s ease-in-out;
+}
+
+.temperature-value {
+  font-weight: bold;
+  color: #333;
+}
+
+.unit-toggle {
+  display: inline;
+}
+
+.active-unit {
+  color: black;
+}
+
+.inactive-unit {
+  color: #555;
+  text-decoration: none;
 }

@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Lottie from "lottie-react";
+import sunnyAnimation from "./animations/sunny.json";
+import cloudyAnimation from "./animations/cloudy.json";
+import rainyAnimation from "./animations/rainy.json";
+
 import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
@@ -19,6 +24,13 @@ export default function WeatherForecast(props) {
     });
   }, [props.coordinates]);
 
+  function getAnimation(icon) {
+    if (icon.includes("clear")) return sunnyAnimation;
+    if (icon.includes("cloud")) return cloudyAnimation;
+    if (icon.includes("rain")) return rainyAnimation;
+    return sunnyAnimation;
+  }
+
   if (!loaded || !forecast || !Array.isArray(forecast)) {
     return null;
   }
@@ -35,11 +47,10 @@ export default function WeatherForecast(props) {
                 })}
               </div>
               <div className="WeatherForecast-icon">
-                <img
-                  height="40"
-                  width="40"
-                  alt={day.condition.description}
-                  src={day.condition.icon_url}
+                <Lottie
+                  animationData={getAnimation(day.condition.icon)}
+                  loop={true}
+                  style={{ height: 40, width: 40 }}
                 />
               </div>
               <div className="WeatherForecast-temp">

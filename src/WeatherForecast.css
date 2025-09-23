@@ -14,3 +14,8 @@
   color: black;
   font-family: arial, sans-serif;
 }
+.WeatherForecast-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

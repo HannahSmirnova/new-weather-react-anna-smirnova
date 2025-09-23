@@ -1,0 +1,16 @@
+.col-8 {
+  margin-top: 20px;
+}
+
+.WeatherForecast-temp {
+  font-size: 14px;
+}
+.col-2 {
+  border-radius: 8px;
+  text-align: center;
+}
+.WeatherForecast-temp-max,
+.WeatherForecast-day {
+  color: black;
+  font-family: arial, sans-serif;
+}

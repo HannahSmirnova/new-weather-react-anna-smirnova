@@ -9,6 +9,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       date: new Date(response.data.time * 1000),
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
@@ -34,14 +35,14 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="weather">
-        <form onSubmit={handleSubmit}>
+        <form className="mb-3" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
                 type="search"
                 placeholder="Enter a city name"
                 className="form-control"
-                auto-focus="on"
+                autoFocus="on"
                 onChange={handleCityChange}
               />
             </div>
@@ -49,7 +50,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-dark pe-3 ps-3"
+                className="btn btn-dark pe-5 ps-5"
               />
             </div>
           </div>

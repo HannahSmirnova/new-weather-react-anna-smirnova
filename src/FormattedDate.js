@@ -1,26 +1,25 @@
 export default function FormattedDate(props) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  const timeZoneMap = {
+    Tokyo: "Asia/Tokyo",
+    Sydney: "Australia/Sydney",
+    London: "Europe/London",
+    NewYork: "America/New_York",
+    Yorkton: "America/Regina",
+    Paris: "Europe/Paris",
+    Delhi: "Asia/Kolkata",
+    Vancouver: "America/Vancouver",
+    Toronto: "America/Toronto",
+    Moscow: "Europe/Moscow",
+  };
 
-  let day = days[props.date.getDay()];
-  let hours = props.date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = props.date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  return (
-    <div>
-      {day}, {hours}:{minutes}
-    </div>
-  );
+  const timeZone = timeZoneMap[props.city] || "UTC";
+
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    weekday: "long",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: timeZone,
+  });
+
+  return <div>{formatter.format(props.date)}</div>;
 }

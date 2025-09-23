@@ -1,4 +1,5 @@
 import FormattedDate from "./FormattedDate";
+import WeatherForecast from "./WeatherForecast";
 import { useState } from "react";
 
 export default function SearchInfo(props) {
@@ -18,13 +19,21 @@ export default function SearchInfo(props) {
 
   return (
     <div className="SearchInfo">
-      <h1>{props.info.city}</h1>
-      <ul className="pt-3 ps-1">
-        <li>
-          <FormattedDate date={props.info.date} />
-        </li>
-        <li className="text-capitalize">{props.info.description}</li>
-      </ul>
+      <div className="row">
+        <div className="col-4">
+          <h1>{props.info.city}</h1>
+          <ul className="pt-3 ps-1">
+            <li>
+              <FormattedDate date={props.info.date} city={props.info.city} />
+            </li>
+            <li className="text-capitalize pt-1">{props.info.description}</li>
+          </ul>
+        </div>
+        <div className="col-8">
+          <WeatherForecast coordinates={props.info.coordinates} />
+        </div>
+      </div>
+
       <div className="row">
         <div className="col-6">
           <img
@@ -48,7 +57,8 @@ export default function SearchInfo(props) {
                 °C
               </a>
             )}
-            {" | "}
+            <span className="divider"> | </span>
+
             {unit === "fahrenheit" ? (
               <span className="active-unit">°F</span>
             ) : (
@@ -62,7 +72,7 @@ export default function SearchInfo(props) {
         <div className="col-6 second-column">
           <ul>
             <li>Humidity: {props.info.humidity}%</li>
-            <li>Wind: {props.info.wind} km/h</li>
+            <li className="pt-1">Wind: {props.info.wind} km/h</li>
           </ul>
         </div>
       </div>

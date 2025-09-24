@@ -1,0 +1,89 @@
+@media (max-width: 568px) {
+  .weather-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .WeatherForecast-icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .weather-details p {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 5px 10px !important;
+  }
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top: 1px dashed black;
+  }
+  .second-column {
+    padding-top: 20px;
+  }
+
+  .weather-details {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .weather-details li {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 10px;
+    min-width: 80px;
+  }
+
+  .forecast-inline {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .divider-forecast {
+    display: none;
+  }
+  .WeatherForecast-temp-max,
+  .WeatherForecast-temp-min {
+    font-size: 12px;
+  }
+
+  .col-12 ul {
+    list-style: none;
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .col-6 {
+    display: block;
+    flex: 0 0 90%;
+    max-width: 90%;
+    justify-content: center;
+    justify-items: center;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .temperature-value,
+  .unit-toggle {
+    font-size: 28px;
+  }
+  .divider {
+    padding-top: 15px;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+}

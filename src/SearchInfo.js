@@ -1,5 +1,6 @@
 import FormattedDate from "./FormattedDate";
 import WeatherForecast from "./WeatherForecast";
+import "./Responsive.css";
 import { useState } from "react";
 
 export default function SearchInfo(props) {
@@ -20,7 +21,7 @@ export default function SearchInfo(props) {
   return (
     <div className="SearchInfo">
       <div className="row">
-        <div className="col-4">
+        <div className="col-12 col-md-4 order-1 order-md-1">
           <h1>{props.info.city}</h1>
           <ul className="pt-3 ps-1">
             <li>
@@ -29,7 +30,7 @@ export default function SearchInfo(props) {
             <li className="text-capitalize pt-1">{props.info.description}</li>
           </ul>
         </div>
-        <div className="col-8">
+        <div className="col-12 col-md-8 order-2 order-md-2">
           <WeatherForecast coordinates={props.info.coordinates} />
         </div>
       </div>
@@ -70,7 +71,7 @@ export default function SearchInfo(props) {
         </div>
 
         <div className="col-6 second-column">
-          <ul>
+          <ul className="weather-details">
             <li>Humidity: {props.info.humidity}%</li>
             <li className="pt-1">Wind: {props.info.wind} km/h</li>
           </ul>

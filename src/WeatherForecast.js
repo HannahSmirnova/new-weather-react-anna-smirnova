@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./Responsive.css";
 import Lottie from "lottie-react";
 import sunnyAnimation from "./animations/sunny.json";
 import cloudyAnimation from "./animations/cloudy.json";
 import rainyAnimation from "./animations/rainy.json";
+import snowAnimation from "./animations/snow.json";
+import windyAnimation from "./animations/windy.json";
+import thunderstormAnimation from "./animations/thunderstorm.json";
 
 import "./WeatherForecast.css";
 
@@ -28,6 +32,9 @@ export default function WeatherForecast(props) {
     if (icon.includes("clear")) return sunnyAnimation;
     if (icon.includes("cloud")) return cloudyAnimation;
     if (icon.includes("rain")) return rainyAnimation;
+    if (icon.includes("snow")) return snowAnimation;
+    if (icon.includes("wind")) return windyAnimation;
+    if (icon.includes("thunderstorm")) return thunderstormAnimation;
     return sunnyAnimation;
   }
 

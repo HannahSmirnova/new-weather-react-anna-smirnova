@@ -43,12 +43,13 @@ body {
   padding-left: 0;
 }
 .second-column {
+  display: block;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
   list-style: none;
   color: rgb(135, 135, 135);
-  padding-top: 58px;
+  padding-top: 54px;
 }
 .weather ul {
   margin: 0;
@@ -95,4 +96,8 @@ body {
 .inactive-unit {
   color: #555;
   text-decoration: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }

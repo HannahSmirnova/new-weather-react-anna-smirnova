@@ -6,7 +6,6 @@
   font-size: 14px;
 }
 .col-2 {
-  border-radius: 8px;
   text-align: center;
 }
 .WeatherForecast-temp-max,
@@ -18,4 +17,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.forecast-inline {
+  padding-top: 20px;
 }
